@@ -1,419 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanym's Envisions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/style.scss">
-    <link rel="stylesheet" href="CSS/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanym's Envisions — Futuristic Personal & Tech Blog</title>
+  <meta name="description" content="Tanym's Envisions - A futuristic materialistic personal blog and digital sanctuary exploring technology, philosophy, architectural geometry, and visual thoughts.">
+  <meta name="theme-color" content="#090b10">
+
+  <!-- Indestructible Vector Favicon -->
+  <link rel="icon" type="image/svg+xml" href="Images/logo.svg">
+  <link rel="apple-touch-icon" href="Images/logo.svg">
+
+  <!-- Futuristic Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+
+  <!-- Futuristic Material UI Stylesheet -->
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
-<body style="background-color: rgb(37, 37, 39);">
+<body>
 
+  <!-- Ambient Matrix Background Overlay -->
+  <div class="futuristic-bg-grid" aria-hidden="true"></div>
 
-  <!-- Sidebar start -->
+  <!-- Back to Top Floating Action Button (FAB) -->
+  <button id="myBtn" title="Scroll to Top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
-<div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">Home</a>
-    <a href="#">Catagories</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </div>
-  
-  <div id="main">
-    <button class="openbtn" onclick="openNav()">&#9776;</button>
-  </div>
-<br>
-<br>
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <!-- Futuristic Glassmorphic Navigation Dock -->
+  <header class="futuristic-navbar">
+    <nav class="navbar-dock" aria-label="Main Navigation">
+      <!-- Brand Logo -->
+      <a href="#hero" class="navbar-brand-futuristic">
+        <img src="Images/logo.svg" alt="Tanym's Envisions Logo" class="brand-logo-img" width="38" height="38">
+        <span>TANYM'S <span class="brand-text-accent">ENVISIONS</span></span>
+      </a>
 
-<!-- Sidebar end -->
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links-desktop mb-0">
+        <li><a href="#hero" class="nav-pill-link active">Home</a></li>
+        <li><a href="#articles" class="nav-pill-link">Blocks of Thought</a></li>
+        <li><a href="#about" class="nav-pill-link">The Vision</a></li>
+        <li><a href="#contact" class="nav-pill-link">Contact</a></li>
+      </ul>
 
+      <!-- Mobile Hamburger Toggle -->
+      <button class="btn-mobile-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNavDrawer" aria-controls="mobileNavDrawer" aria-label="Open Navigation Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
 
-<div class="container">
-  
-  
-  
-  <div class="row">
-  <div class="col-lg-6 col-md-4 col-sm-12 text-wrap intro  ">
-    <h1 style="color: WHITE; font-family: 'Poiret One', cursive; font-size: 72px;"> <b>TANYM'S <br> ENVISIONS </b> </h1>
-  </div>
-  <div class="col-lg-6 col-md-4 col-sm-12">
-  <div class="dark_image">
-    <img src="Images/dark.jpg" class="img-fluid rounded-5" alt="">
-  </div>
-</div>
-</div>
-</div>
-
-<div class="container">
-  <div class="tot">
-    <p style="color: white; font-family: 'Raleway', sans-serif; font-size: 50px;">BLOKS OF THOUGHT</p>
-  </div>
-</div>
- <br>
-<br>
-<br>
-
-
-
-
-
-
-<!-- posts start -->
-
-
-
-
-<div class="container">
- 
-  <div class="row">
-  
-  
-  
-  <div class="col-lg-3 d-flex justify-content-center p-5">
-    
-    <div class="card" style="width: 18rem;">
-      <img src="Images/a1.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+  <!-- Mobile Offcanvas Futuristic Drawer -->
+  <div class="offcanvas offcanvas-start offcanvas-futuristic" tabindex="-1" id="mobileNavDrawer" aria-labelledby="mobileNavDrawerLabel">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2" id="mobileNavDrawerLabel">
+        <img src="Images/logo.svg" alt="Tanym's Envisions Logo" class="brand-logo-img" width="34" height="34">
+        <span class="fw-bold fs-5">TANYM'S <span class="brand-text-accent">ENVISIONS</span></span>
       </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-  
-  
-    
-  </div>
-  
-  
-  <div class="col-lg-3 d-flex justify-content-center p-5">
-    
-    <div class="card" style="width: 18rem;">
-      <img src="Images/a2.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  
-  
-    
-  </div>
-  
-  
-  <div class="col-lg-3 d-flex justify-content-center p-5">
-    
-    <div class="card" style="width: 18rem;">
-      <img src="Images/a3.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  
-  
-    
-  </div>
-  
-  
-  <div class="col-lg-3 d-flex justify-content-center p-5">
-    
-    <div class="card" style="width: 18rem;">
-      <img src="Images/a5.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  
-  
-    
-  </div>
-  
-  
-  
-  
-  
-  
-  
-    
-  </div>
-  
-  
-  
-  
-  
-  </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+      <ul class="drawer-links-list">
+        <li class="drawer-link-item">
+          <a href="#hero" class="drawer-link active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li class="drawer-link-item">
+          <a href="#articles" class="drawer-link">
+            <i class="fas fa-newspaper"></i>
+            <span>Blocks of Thought</span>
+          </a>
+        </li>
+        <li class="drawer-link-item">
+          <a href="#about" class="drawer-link">
+            <i class="fas fa-feather-alt"></i>
+            <span>The Vision</span>
+          </a>
+        </li>
+        <li class="drawer-link-item">
+          <a href="#contact" class="drawer-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </li>
+      </ul>
 
-  <div class="container">
- 
-    <div class="row">
-    
-    
-    
-    <div class="col-lg-3 d-flex justify-content-center p-5">
-      
-      <div class="card" style="width: 18rem;">
-        <img src="Images/a6.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="p-3 border-top border-secondary border-opacity-25 text-center">
+        <div class="d-inline-flex align-items-center gap-2 text-muted small">
+          <span class="pulse-dot"></span>
+          <span>NIHAR Technologies &bull; Blog Edition 2026</span>
         </div>
       </div>
-    
-    
-      
     </div>
-    
-    
-    <div class="col-lg-3 d-flex justify-content-center p-5">
-      
-      <div class="card" style="width: 18rem;">
-        <img src="Images/a7.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    
-    
-      
-    </div>
-    
-    
-    <div class="col-lg-3 d-flex justify-content-center p-5">
-      
-      <div class="card" style="width: 18rem;">
-        <img src="Images/a8.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    
-    
-      
-    </div>
-    
-    
-    <div class="col-lg-3 d-flex justify-content-center p-5">
-      
-      <div class="card" style="width: 18rem;">
-        <img src="Images/a9.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    
-    
-      
-    </div>
-    
-    
-    
-    
-    
-    
-    
-      
-    </div>
-    
-    
-    
-    
-    
-    </div>
+  </div>
 
-    <div class="container">
- 
-      <div class="row">
-      
-      
-      
-      <div class="col-lg-3 d-flex justify-content-center p-5">
-        
-        <div class="card" style="width: 18rem;">
-          <img src="Images/A4.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+  <!-- Main Content Container -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Hero Text Content -->
+          <div class="col-lg-7 col-md-12 pe-lg-5">
+            <div class="hero-pill-badge">
+              <i class="fas fa-sparkles"></i>
+              <span>The Digital Discourse &bull; Futuristic Editorial</span>
+            </div>
+
+            <h1 class="hero-title-main">
+              TANYM'S <br>
+              <span class="glow-text-primary">ENVISIONS</span>
+            </h1>
+
+            <p class="hero-description">
+              A futuristic publication exploring the intersection of modern technology, architectural geometry, and human consciousness. Welcome to the curated essays and visual thoughts of Tanym.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 hero-btn-group">
+              <a href="#articles" class="btn-material-futuristic btn-primary-glow">
+                <span>Read Latest Articles</span>
+                <i class="fas fa-arrow-down"></i>
+              </a>
+              <a href="#about" class="btn-material-futuristic btn-glass-outline">
+                <span>About The Author</span>
+                <i class="fas fa-user-astronaut"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual: Featured Editorial Essay -->
+          <div class="col-lg-5 col-md-12 mt-5 mt-lg-0">
+            <div class="hero-visual-wrapper">
+              <div class="hologram-ambient-glow" aria-hidden="true"></div>
+              <div class="hologram-card-container">
+                <div class="hologram-image-inner">
+                  <span class="hud-tag-top">
+                    <i class="fas fa-star glow-text-cyan"></i>
+                    <span>EDITORIAL SPOTLIGHT</span>
+                  </span>
+                  <img src="Images/dark.jpg" alt="Featured Article: Twilight Mindscape" class="hero-showcase-img">
+                  <div class="hud-tag-bottom">
+                    <div>
+                      <div class="fw-semibold">Twilight Mindscape</div>
+                      <div class="small text-secondary">Autonomous Consciousness</div>
+                    </div>
+                    <span class="badge bg-dark border border-info text-info font-monospace">5 min read</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      
-      
-        
       </div>
-      
-      
-      <div class="col-lg-3 d-flex justify-content-center p-5">
-        
-        <div class="card" style="width: 18rem;">
-          <img src="Images/a11.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      
-      
-        
-      </div>
-      
-      
-      <div class="col-lg-3 d-flex justify-content-center p-5">
-        
-        <div class="card" style="width: 18rem;">
-          <img src="Images/a12.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      
-      
-        
-      </div>
-      
-      
-      <div class="col-lg-3 d-flex justify-content-center p-5">
-        
-        <div class="card" style="width: 18rem;">
-          <img src="Images/a5.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      
-      
-        
-      </div>
-      
-      
-      
-      
-      
-      
-      
-        
-      </div>
-      
-      
-      
-      
-      
-      </div>
-<!-- post end -->
+    </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 footer-column">
-       <ul class="nav flex-column">
-          <li class="nav-item">
-            <span class="footer-title">Company</span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Catagories</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
+    <!-- Blocks of Thought (Blog Articles Grid) -->
+    <section id="articles" class="section-wrapper">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="text-center">
+          <div class="section-badge-center">
+            <i class="fas fa-book-open"></i>
+            <span>Curated Essays</span>
+          </div>
+          <h2 class="section-heading-lg">
+            BLOCKS OF <span class="glow-text-primary">THOUGHT</span>
+          </h2>
+          <p class="section-subtext">
+            Twelve in-depth reflections examining digital aesthetics, architectural philosophy, and futuristic paradigms. Select a category below to explore.
+          </p>
+
+          <!-- Category Filter Chips -->
+          <div class="filter-chips-container" role="tablist">
+            <button class="filter-chip-btn active" data-filter="all">All Articles (12)</button>
+            <button class="filter-chip-btn" data-filter="tech">Tech &amp; Mind</button>
+            <button class="filter-chip-btn" data-filter="atmospheres">Atmospheres</button>
+            <button class="filter-chip-btn" data-filter="monochrome">Monochrome &amp; Noir</button>
+            <button class="filter-chip-btn" data-filter="architecture">Urban Structuralism</button>
+          </div>
+        </div>
+
+        <!-- 12 Responsive Blog Cards Grid -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4" id="articlesGrid">
           
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4 footer-column">
-        
-      </div>
-      <div class="col-md-4 footer-column">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <span class="footer-title">Contact</span>
-          </li>
-          <li class="nav-item">
-            <span class="nav-link"><i class="fas fa-phone"></i>+47 45 80 80 80</span>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-comments"></i>Live chat</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-envelope"></i>Contact us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fas fa-star"></i>Give feedback</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+          <!-- Article 1: a1.jpg -->
+          <div class="col gallery-card-item" data-category="tech">
+            <article class="futuristic-card">
+              <div class="card-media-wrapper">
+                <span class="card-badge-category">Tech &amp; Mind</span>
+                <span class="card-badge-readtime">4 min read</span>
+                <img src="Images/a1.jpg" alt="The Solitude of Dawn" class="card-img-futuristic" loading="lazy">
+                <div class="card-media-scrim"></div>
+              </div>
+              <div class="card-body-futuristic">
+                <h3 class="card-title-futuristic">The Solitude of Dawn</h3>
+                <p class="card-text-narrative">
+                  How solitary human contemplation in the morning sun unlocks cognitive stillness within a world inundated with constant synthetic notifications.
+                </p>
+                <div class="card-footer-meta">
+                  <span class="meta-chip-date"><i class="fas fa-feather-alt text-info"></i> Tanym &bull; Nov 2026</span>
+                  <a href="#" class="btn-card-explore" aria-label="Read The Solitude of Dawn">
+                    <span>Read Essay</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
 
-    
-    
-    <div class="row text-center">
-      <div class="col-md-4 box">
-        <span class="copyright quick-links">Copyright &copy; NIHAR Technologies <script>document.write(new Date().getFullYear())</script>
-        </span>
+          <!-- Article 2: a2.jpg -->
+          <div class="col gallery-card-item" data-category="atmospheres">
+            <article class="futuristic-card">
+              <div class="card-media-wrapper">
+                <span class="card-badge-category">Atmospheres</span>
+                <span class="card-badge-readtime">5 min read</span>
+                <img src="Images/a2.jpg" alt="Whispers in the Mist" class="card-img-futuristic" loading="lazy">
+                <div class="card-media-scrim"></div>
+              </div>
+              <div class="card-body-futuristic">
+                <h3 class="card-title-futuristic">Whispers in the Mist</h3>
+                <p class="card-text-narrative">
+                  Analyzing the fractal mathematics hidden within dense woodland fog and how natural diffusion informs generative digital lighting.
+                </p>
+                <div class="card-footer-meta">
+                  <span class="meta-chip-date"><i class="fas fa-feather-alt text-info"></i> Tanym &bull; Nov 2026</span>
+                  <a href="#" class="btn-card-explore" aria-label="Read Whispers in the Mist">
+                    <span>Read Essay</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 3: a3.jpg -->
+          <div class="col gallery-card-item" data-category="monochrome">
+            <article class="futuristic-card">
+              <div class="card-media-wrapper">
+                <span class="card-badge-category">Monochrome &amp; Noir</span>
+                <span class="card-badge-readtime">6 min read</span>
+                <img src="Images/a3.jpg" alt="Monochrome Horizons" class="card-img-futuristic" loading="lazy">
+                <div class="card-media-scrim"></div>
+              </div>
+              <div class="card-body-futuristic">
+                <h3 class="card-title-futuristic">Monochrome Horizons</h3>
+                <p class="card-text-narrative">
+                  Stripping chromatic excess to reveal pure texture, raw contrast, and structural authenticity in contemporary philosophical discourse.
+                </p>
+                <div class="card-footer-meta">
+                  <span class="meta-chip-date"><i class="fas fa-feather-alt text-info"></i> Tanym &bull; Nov 2026</span>
+                  <a href="#" class="btn-card-explore" aria-label="Read Monochrome Horizons">
+                    <span>Read Essay</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 4: a5.jpg -->
+          <div class="col gallery-card-item" data-category="architecture">
+            <article class="futuristic-card">
+              <div class="card-media-wrapper">
+                <span class="card-badge-category">Urban Structuralism</span>
+                <span class="card-badge-readtime">4 min read</span>
+                <img src="Images/a5.jpg" alt="Chroma & Concrete" class="card-img-futuristic" loading="lazy">
+                <div class="card-media-scrim"></div>
+              </div>
+              <div class="card-body-futuristic">
+                <h3 class="card-title-futuristic">Chroma &amp; Concrete</h3>
+                <p class="card-text-narrative">
+                  The unexpected harmony between brutalist concrete monoliths and dynamic ambient color: a critique of 21st-century architectural psychology.
+                </p>
+                <div class="card-footer-meta">
+                  <span class="meta-chip-date"><i class="fas fa-feather-alt text-info"></i> Tanym &bull; Nov 2026</span>
+                  <a href="#" class="btn-card-explore" aria-label="Read Chroma and Concrete">
+                    <span>Read Essay</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 5: a6.jpg -->
+          <div class="col gallery-card-item" data-category="atmospheres">
+            <article class="futuristic-card">
+              <div class="card-media-wrapper">
+                <span class="card-badge-category">Atmospheres</span>
+                <span class="card-badge-readtime">3 min read</span>
+                <img src="Images/a6.jpg" alt="Abstract Reverie" class="card-img-futuristic" loading="lazy">
+                <div class="card-media-scrim"></div>
+              </div>
+              <div class="card-body-futuristic">
+                <h3 class="card-title-futuristic">Abstract Reverie</h3>
+                <p class="card-text-narrative">
+                  Nocturnal light streaks and the sensation of passing through temporal flow: how velocity reshapes our perception of physical place.
+                </p>
+                <div class="card-footer-meta">
+                  <span class="meta-chip-date"><i class="fas fa-feather-alt text-info"></i> Tanym &bull; Nov 2026</span>
+                  <a href="#" class="btn-card-explore" aria-label="Read Abstract Reverie">
+                    <span>Read Essay</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 6: a7.jpg -->
+          <div class="col gallery-card-item" data-category="tech">
+            <article class="futuristic-card">
+              <div class="card-media-wrapper">
+                <span class="card-badge-category">Tech &amp; Mind</span>
+                <span class="card-badge-readtime">5 min read</span>
+                <img src="Images/a7.jpg" alt="The Chromatic Spectrum" class="card-img-futuristic" loading="lazy">
+                <div class="card-media-scrim"></div>
+              </div>
+              <div class="card-body-futuristic">
+                <h3 class="card-title-futuristic">The Chromatic Spectrum</h3>
+                <p class="card-text-narrative">
+                  Examining emotional resonance in cyber-aesthetic interfaces: why neon luminescence activates forward-thinking cognitive responses.
+                </p>
+                <div class="card-footer-meta">
+                  <span class="meta-chip-date"><i class="fas fa-feather-alt text-info"></i> Tanym &bull; Nov 2026</span>
+                  <a href="#" class="btn-card-explore" aria-label="Read The Chromatic Spectrum">
+                    <span>Read Essay</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 7: a8.jpg -->
+          <div class="col gallery-card-item" data-category="monochrome">
+            <article class="futuristic-card">
+              <div class="card-media-wrapper">
+                <span class="card-badge-category">Monochrome &amp; Noir</span>
+                <span class="card-badge-readtime">7 min read</span>
+                <img src="Images/a8.jpg" alt="Echoes of Deep Time" class="card-img-futuristic" loading="lazy">
+                <div class="card-media-scrim"></div>
+              </div>
+              <div class="card-body-futuristic">
+                <h3 class="card-title-futuristic">Echoes of Deep Time</h3>
+                <p class="card-text-narrative">
+                  Geological stone formations standing resilient against ephemeral digital trends: lessons in timeless enduring system architecture.
+                </p>
+                <div class="card-footer-meta">
+                  <span class="meta-chip-date"><i class="fas fa-feather-alt text-info"></i> Tanym &bull; Nov 2026</span>
+                  <a href="#" class="btn-card-explore" aria-label="Read Echoes of Deep Time">
+                    <span>Read Essay</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 8: a9.jpg -->
+          <div class="col gallery-card-item" data-category="architecture">
+            <article class="futuristic-card">
+              <div class="card-media-wrapper">
+                <span class="card-badge-category">Urban Structuralism</span>
+                <span class="card-badge-readtime">5 min read</span>
+                <img src="Images/a9.jpg" alt="The Vertical Citadel" class="card-img-futuristic" loading="lazy">
+                <div class="card-media-scrim"></div>
+              </div>
+              <div class="card-body-futuristic">
+                <h3 class="card-title-futuristic">The Vertical Citadel</h3>
+                <p class="card-text-narrative">
+                  Towering glass monoliths and human scale: navigating loneliness, purpose, and community inside modern vertical mega-cities.
+                </p>
+                <div class="card-footer-meta">
+                  <span class="meta-chip-date"><i class="fas fa-feather-alt text-info"></i> Tanym &bull; Nov 2026</span>
+                  <a href="#" class="btn-card-explore" aria-label="Read The Vertical Citadel">
+                    <span>Read Essay</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 9: A4.png -->
+          <div class="col gallery-card-item" data-category="atmospheres">
+            <article class="futuristic-card">
+              <div class="card-media-wrapper">
+                <span class="card-badge-category">Atmospheres</span>
+                <span class="card-badge-readtime">4 min read</span>
+                <img src="Images/A4.png" alt="Cognitive Mirage" class="card-img-futuristic" loading="lazy">
+                <div class="card-media-scrim"></div>
+              </div>
+              <div class="card-body-futuristic">
+                <h3 class="card-title-futuristic">Cognitive Mirage</h3>
+                <p class="card-text-narrative">
+                  Exploring optical boundaries between synthetic simulation and sensory perception: are we curating realities or reflections?
+                </p>
+                <div class="card-footer-meta">
+                  <span class="meta-chip-date"><i class="fas fa-feather-alt text-info"></i> Tanym &bull; Nov 2026</span>
+                  <a href="#" class="btn-card-explore" aria-label="Read Cognitive Mirage">
+                    <span>Read Essay</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 10: a11.jpg -->
+          <div class="col gallery-card-item" data-category="tech">
+            <article class="futuristic-card">
+              <div class="card-media-wrapper">
+                <span class="card-badge-category">Tech &amp; Mind</span>
+                <span class="card-badge-readtime">6 min read</span>
+                <img src="Images/a11.jpg" alt="Twilight Horizons" class="card-img-futuristic" loading="lazy">
+                <div class="card-media-scrim"></div>
+              </div>
+              <div class="card-body-futuristic">
+                <h3 class="card-title-futuristic">Twilight Horizons</h3>
+                <p class="card-text-narrative">
+                  The poetic transition of twilight as a metaphor for paradigm shifts in synthetic intelligence and humanity's shared technological future.
+                </p>
+                <div class="card-footer-meta">
+                  <span class="meta-chip-date"><i class="fas fa-feather-alt text-info"></i> Tanym &bull; Nov 2026</span>
+                  <a href="#" class="btn-card-explore" aria-label="Read Twilight Horizons">
+                    <span>Read Essay</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 11: a12.jpg -->
+          <div class="col gallery-card-item" data-category="monochrome">
+            <article class="futuristic-card">
+              <div class="card-media-wrapper">
+                <span class="card-badge-category">Monochrome &amp; Noir</span>
+                <span class="card-badge-readtime">4 min read</span>
+                <img src="Images/a12.jpg" alt="Symphony of Darkness" class="card-img-futuristic" loading="lazy">
+                <div class="card-media-scrim"></div>
+              </div>
+              <div class="card-body-futuristic">
+                <h3 class="card-title-futuristic">Symphony of Darkness</h3>
+                <p class="card-text-narrative">
+                  Light only carries meaning when bounded by darkness: why negative space and deliberate restraint remain the supreme principles of design.
+                </p>
+                <div class="card-footer-meta">
+                  <span class="meta-chip-date"><i class="fas fa-feather-alt text-info"></i> Tanym &bull; Nov 2026</span>
+                  <a href="#" class="btn-card-explore" aria-label="Read Symphony of Darkness">
+                    <span>Read Essay</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 12: a5.png -->
+          <div class="col gallery-card-item" data-category="architecture">
+            <article class="futuristic-card">
+              <div class="card-media-wrapper">
+                <span class="card-badge-category">Urban Structuralism</span>
+                <span class="card-badge-readtime">5 min read</span>
+                <img src="Images/a5.png" alt="Spatial Minimalism" class="card-img-futuristic" loading="lazy">
+                <div class="card-media-scrim"></div>
+              </div>
+              <div class="card-body-futuristic">
+                <h3 class="card-title-futuristic">Spatial Minimalism</h3>
+                <p class="card-text-narrative">
+                  Removing non-essential elements to let clarity emerge: a manifesto on crafting calm digital workspaces in an era of sensory overload.
+                </p>
+                <div class="card-footer-meta">
+                  <span class="meta-chip-date"><i class="fas fa-feather-alt text-info"></i> Tanym &bull; Nov 2026</span>
+                  <a href="#" class="btn-card-explore" aria-label="Read Spatial Minimalism">
+                    <span>Read Essay</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
       </div>
-      <div class="col-md-4 box">
-        <ul class="list-inline social-buttons">
-          <li class="list-inline-item">
-            <a href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          </li>
-        </ul>
+    </section>
+
+    <!-- The Author & Philosophy Section -->
+    <section id="about" class="section-wrapper pt-0">
+      <div class="container">
+        <div class="about-vision-card">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="section-badge-center mb-3">
+                <i class="fas fa-feather-alt"></i>
+                <span>About The Author</span>
+              </div>
+              <h2 class="section-heading-lg mb-4">
+                THE MIND BEHIND <span class="glow-text-primary">ENVISIONS</span>
+              </h2>
+              <p class="text-secondary mb-4" style="font-size: 1.05rem; line-height: 1.8;">
+                Tanym is an essayist, technologist, and visual researcher exploring the evolving frontier between human emotion, digital architecture, and machine intelligence. Tanym's Envisions exists as an intellectual sandbox—translating complex perceptions into digestible, aesthetic blocks of thought.
+              </p>
+              <div class="d-flex align-items-center gap-4">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fas fa-check-circle text-info"></i>
+                  <span class="fw-semibold">Editorial Discourse</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fas fa-check-circle text-info"></i>
+                  <span class="fw-semibold">Material 3 UI</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fas fa-check-circle text-info"></i>
+                  <span class="fw-semibold">NIHAR Technologies</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="about-feature-box">
+                    <div class="feature-box-icon"><i class="fas fa-brain"></i></div>
+                    <h4 class="h6 fw-bold text-white mb-2">Cognitive Philosophy</h4>
+                    <p class="small text-secondary mb-0">Essays examining mindfulness, focus, and human psychology in the post-digital epoch.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="about-feature-box">
+                    <div class="feature-box-icon"><i class="fas fa-eye"></i></div>
+                    <h4 class="h6 fw-bold text-white mb-2">Visual Semiotics</h4>
+                    <p class="small text-secondary mb-0">Curated high-res imagery communicating silent narratives beyond text.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="about-feature-box">
+                    <div class="feature-box-icon"><i class="fas fa-building"></i></div>
+                    <h4 class="h6 fw-bold text-white mb-2">Future Architecture</h4>
+                    <p class="small text-secondary mb-0">Structural analyses of evolving urban spaces, mega-cities, and minimalism.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="about-feature-box">
+                    <div class="feature-box-icon"><i class="fas fa-terminal"></i></div>
+                    <h4 class="h6 fw-bold text-white mb-2">Tech Horizons</h4>
+                    <p class="small text-secondary mb-0">Speculative perspectives on synthetic systems, autonomous agents, and society.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4 box">
-        
+    </section>
+
+    <!-- Discussion & Contact Section -->
+    <section id="contact" class="section-wrapper pt-0">
+      <div class="container">
+        <div class="glass-panel p-4 p-md-5">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <div class="section-badge-center mb-2">
+                <i class="fas fa-paper-plane"></i>
+                <span>Editorial Correspondence</span>
+              </div>
+              <h2 class="h1 fw-bold text-white mb-3">Join The Discourse</h2>
+              <p class="text-secondary mb-4">
+                Have a reaction, counter-perspective, or proposal for collaborative editorial writing? Transmit your thoughts directly to Tanym.
+              </p>
+              <div class="d-flex flex-wrap gap-4 text-secondary small">
+                <div>
+                  <i class="fas fa-envelope text-info me-2"></i>
+                  <a href="mailto:tanymbarakah@yahoo.com" class="text-white text-decoration-none">tanymbarakah@yahoo.com</a>
+                </div>
+                <div>
+                  <i class="fas fa-phone text-info me-2"></i>
+                  <a href="tel:+4745808080" class="text-white text-decoration-none">+47 45 80 80 80</a>
+                </div>
+                <div>
+                  <i class="fas fa-globe text-info me-2"></i>
+                  <span class="text-white">Global Dispatch</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+              <a href="mailto:tanymbarakah@yahoo.com" class="btn-material-futuristic btn-primary-glow px-5 py-3">
+                <i class="fas fa-envelope-open-text me-2"></i>
+                <span>Write To Author</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Article Reader Modal -->
+  <div class="modal fade modal-futuristic" id="articleModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header d-flex justify-content-between align-items-center">
+          <div>
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <span class="badge bg-info text-dark font-monospace" id="modalCategory">Tech &amp; Mind</span>
+              <span class="badge bg-dark border border-secondary text-secondary font-monospace" id="modalReadTime">5 min read</span>
+            </div>
+            <h3 class="modal-title h5 text-white mb-0" id="modalTitle">Article Title</h3>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-preview-img-container">
+            <img src="" alt="Article Visual" id="modalImage" class="modal-preview-img">
+          </div>
+          <div class="d-flex align-items-center gap-2 text-info small mb-3">
+            <i class="fas fa-feather-alt"></i>
+            <span>Written by Tanym &bull; Published under NIHAR Technologies &bull; Nov 2026</span>
+          </div>
+          <p class="text-white fs-6 fw-semibold mb-3" id="modalExcerpt">Excerpt summary of this thought piece.</p>
+          <div class="article-pull-quote">
+            "In an age where information is infinite, intentional reduction is the greatest act of intellect."
+          </div>
+          <p class="text-secondary small line-height-lg">
+            This piece represents an ongoing inquiry into how humans preserve authenticity amidst algorithmic saturation. Through visual documentation and conceptual distillation, we deconstruct our psychological assumptions regarding modern work, architecture, and temporal consciousness.
+          </p>
+        </div>
+        <div class="modal-footer d-flex justify-content-between">
+          <span class="text-muted small">Tanym's Envisions &bull; Editorial Series</span>
+          <div class="d-flex gap-2">
+            <a href="#" target="_blank" id="modalDownloadBtn" class="btn btn-sm btn-outline-info rounded-pill px-3">
+              <i class="fas fa-external-link-alt me-1"></i> Full Artwork
+            </a>
+            <button type="button" class="btn btn-sm btn-secondary rounded-pill px-3" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</footer>
 
+  <!-- Futuristic Footer -->
+  <footer class="footer-futuristic">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand Info -->
+        <div class="col-lg-4 col-md-6">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="Images/logo.svg" alt="Tanym's Envisions Logo" class="brand-logo-img" width="34" height="34">
+            <div class="footer-brand-title mb-0">
+              <span class="glow-text-primary">TANYM'S</span> ENVISIONS
+            </div>
+          </div>
+          <p class="small text-secondary mb-3">
+            A futuristic editorial publication synthesizing thoughts on technology, philosophical inquiry, and modern architecture. Curated by Tanym under NIHAR Technologies.
+          </p>
+          <div class="d-flex align-items-center gap-2">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/tanymbarakah" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
 
+        <!-- Navigation Links -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link"><i class="fas fa-chevron-right small text-info"></i> Home</a></li>
+            <li><a href="#articles" class="footer-link"><i class="fas fa-chevron-right small text-info"></i> Blocks of Thought</a></li>
+            <li><a href="#about" class="footer-link"><i class="fas fa-chevron-right small text-info"></i> The Vision</a></li>
+            <li><a href="#contact" class="footer-link"><i class="fas fa-chevron-right small text-info"></i> Correspondence</a></li>
+          </ul>
+        </div>
 
+        <!-- Topics -->
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-col-title">Topics</h4>
+          <ul class="footer-links-list">
+            <li><a href="#articles" class="footer-link">Tech &amp; Mind</a></li>
+            <li><a href="#articles" class="footer-link">Atmospheres</a></li>
+            <li><a href="#articles" class="footer-link">Monochrome</a></li>
+            <li><a href="#articles" class="footer-link">Structuralism</a></li>
+          </ul>
+        </div>
 
+        <!-- Direct Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-col-title">Author Contact</h4>
+          <ul class="footer-links-list">
+            <li><span class="footer-link"><i class="fas fa-phone small text-info"></i> +47 45 80 80 80</span></li>
+            <li><a href="mailto:tanymbarakah@yahoo.com" class="footer-link"><i class="fas fa-envelope small text-info"></i> tanymbarakah@yahoo.com</a></li>
+            <li><a href="#contact" class="footer-link"><i class="fas fa-comment-dots small text-info"></i> Transmit Thoughts</a></li>
+          </ul>
+        </div>
+      </div>
 
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          Copyright &copy; NIHAR Technologies <span id="currentYear">2026</span>. All Rights Reserved.
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <span class="badge bg-dark border border-secondary text-info font-monospace">Editorial: Futuristic Material Blog v2.5</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-
-    <script src="JS/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/0c6513b4c1.js" crossorigin="anonymous"></script>
-    <script src="JS/jQuery.js"></script>
-    <script src="JS/script.js"></script>
+  <!-- Core JavaScript Libraries -->
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <script src="JS/script.js"></script>
 </body>
 </html>
